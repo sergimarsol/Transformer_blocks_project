@@ -10,6 +10,10 @@ PA2_code/
 ├── dataset.py           # PyTorch Datasets for classification and language modeling
 ├── utilities.py         # Sanity-check & attention-map visualization
 ├── speechesdataset/     # Training and test data (speeches + labels)
+└── plot_scripts/        # Plotting scripts for generating figures
+    ├── plot_part1.py
+    ├── plot_part2.py
+    └── plot_part3.py
 ```
 
 ## Requirements
@@ -109,7 +113,7 @@ All variants modify **only** the attention pattern in the decoder; everything el
 
 ## Results
 
-See `summaries/` for detailed write-ups. Quick comparison of test perplexity:
+Quick comparison of test perplexity:
 
 | Configuration | Obama | W.Bush | H.Bush |
 |---|---|---|---|
@@ -122,11 +126,7 @@ See `summaries/` for detailed write-ups. Quick comparison of test perplexity:
 
 ## Plotting Scripts
 
-Three standalone scripts generate the figures used in the report. Run from `PA2_code/`:
-
-```bash
-cd PA2_code
-```
+Three standalone scripts in `plot_scripts/` generate the figures used in the report:
 
 | Script | Description | Output |
 |---|---|---|
@@ -135,7 +135,7 @@ cd PA2_code
 | `plot_part3.py` | Grouped bar chart comparing test perplexity across all attention variants | `part3_comparison.png` |
 
 ```bash
-python plot_part1.py
-python plot_part2.py
-python plot_part3.py
+python plot_scripts/plot_part1.py
+python plot_scripts/plot_part2.py
+python plot_scripts/plot_part3.py
 ```
